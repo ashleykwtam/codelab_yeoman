@@ -1,5 +1,16 @@
-<div class="jumbotron">
-  <h1>Wow This Is MAGIC</h1>
+<div class="container">
+  <h2>My To-Do List</h2>
+  <p class="form-group" ng-repeat="todo in toDoList">
+    <!-- ng-repeat is an Angular directive that instantiates a template once per item from a collection; each item in the toDoList array will become a new instance of <p><input></p> -->
+    <input type="text" ng-model="todo" class="form-control">
+    <!-- ng-model creates two-way data binding; populates text input field with value from current todo item in loop -->
+  </p>
+</div>
+
+
+<!-- ORIGINAL CODE -->
+<!-- <div class="jumbotron">
+  <h1>WOW This Is MAGIC</h1>
   <p class="lead">
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>
     Always a pleasure scaffolding your apps.
@@ -20,4 +31,4 @@
 
   <h4>Karma</h4>
   <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+</div> -->
