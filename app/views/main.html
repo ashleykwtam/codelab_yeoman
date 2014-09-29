@@ -8,7 +8,7 @@
       <div class="input-group">
         <input type="text" ng-model="todo" placeholder="What needs to be done today?" class="form-control">
         <span class="input-group-btn">
-          <input type="submit" class="btn btn-primary">
+          <input type="submit" class="btn btn-primary" value="Add">
         </span>
       </div>
     </div>
@@ -16,10 +16,15 @@
   <p></p>
 
   <!-- TO-DO LIST -->
-  <p class="form-group" ng-repeat="todo in toDoList">
+  <p class="input-group" ng-repeat="todo in toDoList">
     <!-- ng-repeat is an Angular directive that instantiates a template once per item from a collection; each item in the toDoList array will become a new instance of <p><input></p> -->
     <input type="text" ng-model="todo" class="form-control">
     <!-- ng-model creates two-way data binding; populates text input field with value from current todo item in loop -->
+    <span class="input-group-btn">
+      <button class="btn btn-danger" ng-click="removeToDo($index)" aria-label="Remove">X</button>
+      <!-- ng-click allows to specify custom behaviours when element is clicked -->
+      <!-- $index will be the array index of current toDoList -->
+    </span>
   </p>
 </div>
 

@@ -20,4 +20,8 @@ angular.module('codeLabApp')
     	$scope.toDoList.push($scope.todo);
     	$scope.todo = ' ';
     };
+
+    $scope.removeToDo = function(index) {
+    	$scope.toDoList.splice(index, 1);
+    };
   });
