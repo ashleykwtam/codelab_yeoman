@@ -12,6 +12,12 @@ angular.module('codeLabApp')
     $scope.toDoList = [
     	'Item 1',
     	'Item 2',
-    	'Item 3'
+    	'Item 3',
+    	'Item 4'
     ];
+
+    $scope.addTodo = function() {
+    	$scope.toDoList.push($scope.todo);
+    	$scope.todo = ' ';
+    };
   });

@@ -1,5 +1,21 @@
 <div class="container">
   <h2>My To-Do List</h2>
+
+  <!-- ADD A TO-DO -->
+  <form role="form" ng-submit="addTodo()">
+    <!-- ng-submit binds Angular expression to onsubmit event of form -->
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="todo" placeholder="What needs to be done today?" class="form-control">
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-primary">
+        </span>
+      </div>
+    </div>
+  </form>
+  <p></p>
+
+  <!-- TO-DO LIST -->
   <p class="form-group" ng-repeat="todo in toDoList">
     <!-- ng-repeat is an Angular directive that instantiates a template once per item from a collection; each item in the toDoList array will become a new instance of <p><input></p> -->
     <input type="text" ng-model="todo" class="form-control">
