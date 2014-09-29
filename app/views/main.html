@@ -16,7 +16,8 @@
   <p></p>
 
   <!-- TO-DO LIST -->
-  <p class="input-group" ng-repeat="todo in toDoList">
+  <div ui-sortable ng-model="toDoList">
+  <p class="input-group" ng-repeat="todo in toDoList" style="padding: 5px 10px; cursor: move;">
     <!-- ng-repeat is an Angular directive that instantiates a template once per item from a collection; each item in the toDoList array will become a new instance of <p><input></p> -->
     <input type="text" ng-model="todo" class="form-control">
     <!-- ng-model creates two-way data binding; populates text input field with value from current todo item in loop -->
@@ -26,6 +27,7 @@
       <!-- $index will be the array index of current toDoList -->
     </span>
   </p>
+  </div>
 </div>
 
 

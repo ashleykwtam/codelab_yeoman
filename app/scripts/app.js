@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.sortable' // add the moduel to Angular module definitions
   ])
   .config(function ($routeProvider) {
     $routeProvider
